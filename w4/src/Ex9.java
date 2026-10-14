@@ -4,19 +4,18 @@ public class Ex9 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        long a = scanner.nextLong();
-        long b = scanner.nextLong();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
 
-        long larger = a;
-        long smaller = b;
         if (b > a) {
-            larger = b;
-            smaller = a;
+            int temp = a;
+            a = b;
+            b = temp;
         }
 
-        long lcm = larger;
+        int lcm = b;
 
-        while (lcm % smaller != 0) lcm += larger;
+        while (lcm % a != 0) lcm += b;
 
         System.out.println(lcm);
     }
