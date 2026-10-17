@@ -1,0 +1,7 @@
+11235 : digit (1) repeated in positions (4) and (5)
+9010234 : digit (0) repeated in positions (4) and (6)
+1002356 : digit (0) repeated in positions (5) and (6)
+1012345 : digit (1) repeated in positions (5) and (7)
+100000 : digit (0) repeated in positions (1) and (2)
+9898980 : digit (8) repeated in positions (2) and (4)
+33333333 : digit (3) repeated in positions (1) and (2)

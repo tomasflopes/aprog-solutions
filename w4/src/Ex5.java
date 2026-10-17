@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex5 {
-    private static final Scanner scanner = new Scanner(System.in);
+    static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int n = scanner.nextInt();
