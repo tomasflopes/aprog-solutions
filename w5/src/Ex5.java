@@ -13,16 +13,17 @@ public class Ex5 {
                 int temp = n2;
                 int firstDigit = temp % 10;
                 temp /= 10;
-                boolean valid = true;
+                boolean isValid = true;
 
                 while (temp > 0) {
                     int secondDigit = temp % 10;
-                    if (firstDigit <= secondDigit) valid = false;
+                    if (firstDigit <= secondDigit) isValid = false;
+
                     firstDigit = secondDigit;
                     temp /= 10;
                 }
 
-                if (valid) {
+                if (isValid) {
                     System.out.println(n2);
                 }
             }
