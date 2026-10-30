@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Ex1 {
     static final Scanner scanner = new Scanner(System.in);
-    static int K = 5;
+    static final int K = 5;
 
     public static int countDigits(int n) {
         int nOfDigits = 0;
