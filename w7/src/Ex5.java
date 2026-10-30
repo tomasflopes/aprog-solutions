@@ -15,7 +15,6 @@ public class Ex5 {
         return sum;
     }
 
-    // true if value appears among the first (steps + 1) terms of the sequence starting at start
     public static boolean wasSeen(long start, int steps, long value) {
         long current = start;
 
@@ -30,25 +29,29 @@ public class Ex5 {
     public static void showCycle(long n) {
         long current = n;
         int steps = 0;
+        boolean isCyclic = false;
 
         System.out.print(current);
 
-        while (current != 1) {
+        while (current != 1 && !isCyclic) {
             long next = sumOfSquaredDigits(current);
             steps++;
             System.out.print(" > " + next);
 
             if (wasSeen(n, steps - 1, next)) {
                 System.out.println(" ...");
-                System.out.println("Cyclic : " + steps);
-                return;
+                isCyclic = true;
+            } else {
+                current = next;
             }
-
-            current = next;
         }
 
-        System.out.println();
-        System.out.println("Stable : " + steps);
+        if (isCyclic) {
+            System.out.println("Cyclic : " + steps);
+        } else {
+            System.out.println();
+            System.out.println("Stable : " + steps);
+        }
     }
 
     public static void main(String[] args) {

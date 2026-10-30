@@ -4,15 +4,18 @@ public class Ex4 {
     static final Scanner scanner = new Scanner(System.in);
 
     public static boolean hasUniqueDigits(int n) {
-        int seenDigits = 0;
+        int original = n;
 
         while (n != 0) {
             int digit = Math.abs(n % 10);
-            int mask = 1 << digit;
+            int rest = original;
 
-            if ((seenDigits & mask) != 0) return false;
+            while (rest != 0) {
+                int otherDigit = Math.abs(rest % 10);
+                if (digit == otherDigit && rest != n) return false;
+                rest /= 10;
+            }
 
-            seenDigits |= mask;
             n /= 10;
         }
 

@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Ex6 {
     static final Scanner scanner = new Scanner(System.in);
+    static final int MULTIPLICATION_END = 10;
 
     public static int readPositiveValue() {
         int value;
@@ -16,7 +17,7 @@ public class Ex6 {
     public static void showTableOfNumber(int n) {
         System.out.printf("Multiplication table of %d%n", n);
 
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= MULTIPLICATION_END; i++) {
             System.out.printf("%d x %d = %d%n", n, i, n * i);
         }
     }
